@@ -1,50 +1,50 @@
 ## js 编写规范
 
 #### 命名规范
-1. 文件名一律采用小驼峰命名，例如：
+1. 文件名采用小驼峰命名，例如：
 userInfo.js、getLocation.js
 
-2. 组件名一律采用大驼峰命名，例如：
+2. 组件名采用大驼峰命名，例如：
 ZhizuButton.js(x), GetLocation.js(x)
 
 3. 变量名尽量采用小驼峰命名，例如：
 
 ```js
 
-const userName = 'tom';
+const userName = 'tom'
 
 const userLocation = {
   lat: 120.00,
   lng: 60.00
-};
+}
 
-const productCount = 12;
+const productCount = 12
 
 ```
 
-4. 常量一律采用大写命名，大写字母之间用下划线分割，例如：
+4. 常量采用大写命名，大写字母之间用下划线分割，例如：
 
 ```js
 
-const COUNT = 10;
-const ZHIZU_URL = 'https://www.zhizukj.com';
+const COUNT = 10
+const ZHIZU_URL = 'https://www.zhizukj.com'
 
 ```
 
-5. 函数名同变量名，采用小驼峰命名，若函数为增删改查等的某一状态时，需前缀用动词表示，例如：
+5. 函数名同变量名命名方式，采用小驼峰命名，若函数为改变某一状态时，前缀需用动词表示，例如：
 ```js
 
 // 获取经纬度
-const getLocation = ({ lat, lng }) => {};
+const getLocation = ({ lat, lng }) => {}
 
 // 设置用户信息
-const setUserInfo = (info) => {}; 
+const setUserInfo = (info) => {} 
 
 // 添加用户信息
-const addUserInfo = (info) => {};
+const addUserInfo = (info) => {}
 
 // 改变订单状态
-const changeOrderStatus = (status) => {};
+const changeOrderStatus = (status) => {}
 
 // 动词大致可参考，可扩充
 /**
@@ -176,7 +176,7 @@ const form = {
   name: 'tom', // 姓名
   age: 20, // 年龄
   sex: '男' // 性别
-};
+}
 
 ```
 
@@ -189,7 +189,7 @@ const form = {
   name: 'tom',
   age: 20,
   sex: '男'
-};
+}
 
 ```
 
@@ -216,8 +216,8 @@ const form = {
 */
 
 const getUserInfo = ({ name, age }) => {
-  return { name, age };
-};
+  return { name, age }
+}
 
 ```
 
@@ -226,28 +226,28 @@ const getUserInfo = ({ name, age }) => {
 1. 变量赋值：
 ```js
 
-const cabinetName = 'xx柜子';
-const cabinetNo = 'SN202002022012';
+const cabinetName = 'xx柜子'
+const cabinetNo = 'SN202002022012'
 
 // bad
-const url = cabinetName + '-' + cabinetNo;
+const url = cabinetName + '-' + cabinetNo
 
 // good
-const cabinet = `${cabinetName}-${cabinetNo}`;
+const cabinet = `${cabinetName}-${cabinetNo}`
 
 ```
 
 2. 数组解构赋值：
 ```js
 
-const arr = [1, 2, 3];
+const arr = [1, 2, 3]
 
 // bad
-const first = arr[0];
-const second = arr[1];
+const first = arr[0]
+const second = arr[1]
 
 // good
-const [first, second] = arr;
+const [first, second] = arr
 
 ```
 
@@ -256,17 +256,17 @@ const [first, second] = arr;
 
 // bad
 function getFullName(user) {
-  const firstName = user.firstName;
-  const lastName = user.lastName;
+  const firstName = user.firstName
+  const lastName = user.lastName
 }
 
 // good
 function getFullName(obj) {
- const { firstName, lastName } = obj;
+ const { firstName, lastName } = obj
 }
 
 // best
-function getFullName({ firstName, lastName }) {};
+function getFullName({ firstName, lastName }) {}
 
 ```
 
@@ -277,26 +277,26 @@ function getFullName({ firstName, lastName }) {};
 const items = {
   name: 'tom',
   age: 20
-};
+}
 
 // bad
-const itemsCopy = items;
+const itemsCopy = items
 
 // good
-const itemsCopy = Object.assign({}, items);
+const itemsCopy = Object.assign({}, items)
 
 // best
-const itemsCopy = { ...items };
+const itemsCopy = { ...items }
 
 
 // 拷贝数组
-const arrayData = [1, 2, 3, 4];
+const arrayData = [1, 2, 3, 4]
 
-// bad;
-const newArrayData = arrayData;
+// bad
+const newArrayData = arrayData
 
 // good
-const newArrayData = [...arrayData];
+const newArrayData = [...arrayData]
 
 ```
 
@@ -305,10 +305,10 @@ const newArrayData = [...arrayData];
 1. 等号和其他(计算或比较)符号两边必须要有空格，例：
 ```js
 
-const name = 'tom';
-const getName = () => {};
-const num = 1 + 2;
-if (num !== 1) {};
+const name = 'tom'
+const getName = () => {}
+const num = 1 + 2
+if (num !== 1) {}
 
 ```
 
@@ -316,7 +316,7 @@ if (num !== 1) {};
 ```js
 
 // for
-for (let i = 0; i < 10; i++) {};
+for (let i = 0; i < 10; i++) {}
 
 // if  else if  else
 if (a > b) {
@@ -325,21 +325,21 @@ if (a > b) {
 
 } else {
 
-};
+}
 
 // switch
 switch (sex) {
   case 1:
-    return '男';
+    return '男'
   case 2:
-    return '女';
+    return '女'
   default:
-    return '未知';
+    return '未知'
 }
 
 // while
 while (i < 10) {
-  i++;
+  i++
 }
 
 ```
@@ -347,16 +347,16 @@ while (i < 10) {
 3. 箭头函数两边必须要有空格，例：
 ```js
 
-const data = [1, 2, 3].filter(v => v >= 1);
-const getUser = () => {};
+const data = [1, 2, 3].filter(v => v >= 1)
+const getUser = () => {}
 
 ```
 4. 代码块中的逗号后必须要有空格，例：
 ```js
 
-this.$refs.ope.showDialog('2', item);
+this.$refs.ope.showDialog('2', item)
 
-const [first, ...other] = [1, 2, 3].map((v, i) => v > 1);
+const [first, ...other] = [1, 2, 3].map((v, i) => v > 1)
 
 ```
 
@@ -364,18 +364,18 @@ const [first, ...other] = [1, 2, 3].map((v, i) => v > 1);
 ```js
 
 // bad
-const user = "tom";
+const user = "tom"
 
-const sex = "man";
+const sex = "man"
 
-if (name === 'tom') {};
+if (name === 'tom') {}
 
 // good
-const user = 'tom';
+const user = 'tom'
 
-const sex = 'man';
+const sex = 'man'
 
-if (name === 'tom') {};
+if (name === 'tom') {}
 
 ```
 
@@ -384,21 +384,21 @@ if (name === 'tom') {};
 1. 在做比较时必须使用全等，或者非全等，例：
 ```js
 
-for ('abcd'.indexOf('e') === -1) {};
+if ('abcd'.indexOf('e') === -1) {}
 
-const data = [1, 2, 3].find(v => v === 2);
+const data = [1, 2, 3].find(v => v === 2)
 
 ```
 2. 逻辑判断只有一层时，尽量使用三元表达式， 或者使用" && ||"，例：
 ```js
 
 // bad
-const sex = null;
+const sex = null
 
 if (status === 1) {
-  sex =  '男';
+  sex =  '男'
 } else {
-  sex = '女';
+  sex = '女'
 }
 
 // good
@@ -406,4 +406,6 @@ const sex = status === 1 ? '男' : '女'
 
 ```
 
-3. 代码复杂度尽量不要超过6层，（超过6层一定是你写的逻辑有问题，不接受反驳）
+3. 代码圈复杂度最大值控制在6-10之间，不允许超过10，超过10则需重构
+
+    （代码圈复杂度，文档参考[https://zhuanlan.zhihu.com/p/141734006?from_voters_page=true](https://zhuanlan.zhihu.com/p/141734006?from_voters_page=true))
