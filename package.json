@@ -1,13 +1,14 @@
 {
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "demo/**": [
-      "prettier --write",
-      "eslint --fix"
+     "prettier --write",
+     "eslint --fix"
     ]
   },
   "scripts": {
