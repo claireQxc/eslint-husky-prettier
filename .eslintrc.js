@@ -23,7 +23,7 @@ module.exports = {
     // 组件属性名称是否强制连字符  0 = off 1 = warn 2 = error
     'vue/attribute-hyphenation': 1,
     'vue/multi-word-component-names': [
-      'error',
+      0,
       {
         'ignores': [],
       },

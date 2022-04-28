@@ -13,3 +13,10 @@ const d = a > b ? 1 : 0
 if (d) {
   console.log(d)
 }
+
+if (a === 1) {
+  let vv = 1
+  if (vv === 2) {
+    console.log(vv)
+  }
+}
