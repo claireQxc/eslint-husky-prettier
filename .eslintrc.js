@@ -3,7 +3,7 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: ['prettier'],
+  // plugins: ['prettier'],
   extends: [
     'plugin:vue/essential',
     // 'plugin:vue/vue3-essential',
@@ -12,11 +12,11 @@ module.exports = {
     'plugin:vue/recommended',
     // 'plugin:vue/vue3-recommended',
     'eslint:recommended',
-    'prettier'
+    // 'prettier'
     // '@vue/typescript/recommended',
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2020
   },
   rules: {
     // 'prettier/prettier': [1, { parser: 'babel' }],
@@ -90,7 +90,7 @@ module.exports = {
     ],
     'vue/no-lone-template': 0,
     'vue/no-v-html': 1,
-    'indent': 0,
+    'indent': [2, 2, { SwitchCase: 2 }],
     'space-before-function-paren': 0,
     'no-use-before-define': 0,
     // 禁止对象字面量中出现重复的 key
@@ -150,6 +150,39 @@ module.exports = {
     'no-shadow': 2,
     // 默认配置always，要求在行末加上分号
     'semi': [1, 'never'],
+    // 单引号
+    'quotes': [2, 'single', { 
+      avoidEscape: true, 
+      allowTemplateLiterals: true
+    }],
+    'semi-spacing': [
+      2, 
+      { 
+        before: false, 
+        after: true 
+      }],
+    // 强制二元运算符左右各有一个空格
+    'space-infix-ops': 2,
+    // 箭头间距
+    'arrow-spacing': [2, { 
+      before: true, 
+      after: true 
+    }],
+    'space-unary-ops': [2, { 
+      words: true, 
+      nonwords: false 
+    }],
+    // 快间距
+    'block-spacing': [2, 'always'],
+    // 逗号间距
+    'comma-spacing': [2, { 
+      before: false, 
+      after: true
+    }],
+    // 关键字后空格
+    'keyword-spacing': 2,
+    // 块必须至少有一个先前的空间
+    'space-before-blocks': [2, 'always'],
     // 禁止将标识符定义为受限的名字
     'no-shadow-restricted-names': 2,
     // 禁止出现未使用过的变量

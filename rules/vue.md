@@ -148,3 +148,5 @@ export default {
 </div>
 
 ```
+
+4. vue单文件总行数尽量不要超过300行

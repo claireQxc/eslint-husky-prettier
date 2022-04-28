@@ -9,7 +9,7 @@
 #### husky: 主要为了执行lint-staged, commitlint等hook
 
 #### lint-staged: 匹配文件执行shell命令， 比如prettier --write, eslint --fix, 
-#### commitlint 规范commit
+#### commitlint: 规范commit
 1. 
 ```bash
 
