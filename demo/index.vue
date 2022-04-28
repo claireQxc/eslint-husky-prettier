@@ -3,6 +3,7 @@
     <span
       v-for="item in 12"
       :key="item"
+      placeholder="!23"
     >tom</span>
 
     <el-input
@@ -20,6 +21,37 @@
       />
       {{ asdf }}
     </el-select>
+    <el-button
+      type="primary"
+      size="small"
+      @click="onClickButton"
+    >
+      BUTTON
+    </el-button>
+    <el-form>
+      <el-form-item label="username">
+        <el-input
+          style="width: 100%"
+          type="number"
+          @click="onClick"
+        />
+      </el-form-item>
+
+      <el-form-item label>
+        <el-button type="primary" size="small">
+          BUTTON
+        </el-button>
+      </el-form-item>
+      <div class="container">
+        <div class="header" @click="onClick">
+          <ul v-for="item in 10" :key="item">
+            <li data-type="item">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </el-form>
   </div>
 </template>
 <script>
@@ -53,6 +85,7 @@ export default {
     getList() {
       const arr = this.list
       const user = '123'
+      console.log(user)
       return 13
     },
     openModal() {

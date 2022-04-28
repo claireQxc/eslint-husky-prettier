@@ -1,13 +1,15 @@
 const a = 1
-const b = 2
-const c = a > b ? 12 : 123
-
+const b = 3
 if (a === b) {
+  console.log(a, b)
 }
 
-const d = () => {}
-const f = [1, 2, 2]
-const ff = 1
+function test(...arg) {
+  console.log(arg)
+}
+test()
 
-switch (a) {
+const d = a > b ? 1 : 0
+if (d) {
+  console.log(d)
 }
