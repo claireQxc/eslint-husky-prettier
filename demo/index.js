@@ -20,3 +20,6 @@ if (a === 1) {
     console.log(vv)
   }
 }
+
+const cc = '123'
+const ccc = 1

@@ -12,6 +12,11 @@
       data-type="123"
       @click="openModal"
     />
+    <el-input
+      v-model="form.name"
+      data-type="123"
+      @click="onClick"
+    />
     <el-select>
       <el-option
         v-for="item in list"

@@ -6,20 +6,10 @@
 export default {
   name: 'Sn',
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods: {
-    getList() {
-      for (let i = 0; i < 100; i++) {
-        console.log(i)
-      }
-    }
-  }
+  methods: {},
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
