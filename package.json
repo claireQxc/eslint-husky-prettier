@@ -6,8 +6,6 @@
   },
   "lint-staged": {
     "demo/**": [
-     "prettier --write",
-     "eslint --fix"
     ]
   },
   "scripts": {
