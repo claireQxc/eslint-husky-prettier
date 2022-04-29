@@ -5,6 +5,8 @@
 1. <b>eslint</b>, 校验规则见[.eslintrc.js](http://git.devops.zhizukj.com/shijianjun/front-end-rules/-/blob/master/.eslintrc.js)
 
 2. <b>prettier</b>, 格式化规则见[.prettierc](http://git.devops.zhizukj.com/shijianjun/front-end-rules/-/blob/master/.prettierrc.js)
+
+3. <b>eslint-plugin-vue</b>, vue使用eslint-plugin-vue格式化
 ## git hooks说明
 #### husky: 主要为了执行lint-staged, commitlint等hook
 
@@ -111,3 +113,42 @@ git commit -m <type>[optional scope]: <description>
 | revert  | 回滚到上一个版本 |
 | style  | 代码格式修改, 注意不是 css 修改 |
 | test  | 测试用例修改 |
+
+
+#### style 规范（stylelint）
+
+1. 
+```bash
+
+npm i stylelint stylelint-config-standard stylelint-scss stylelint-config-rational-order stylelint-order -D 
+
+```
+
+2. 若需格式化vue单文件style样式，需添加postcss
+```bash
+
+npm i postcss postcss-html postcss-scss -D
+
+```
+
+3. 根目录添加.stylelintrc.js:
+```js
+
+module.exports = {
+  extends: [
+    'stylelint-config-standard', // css默认规则
+    'stylelint-config-standard-scss', // scss规则
+    'stylelint-config-rational-order' // 样式默认排序规则
+  ],
+  plugins: ['stylelint-scss', 'stylelint-order'],
+  rules: {}
+}
+
+```
+
+3. 添加style shell,这个主要为了格式化指定目录的命令，比如格式化demo下的所有css,scss,vue的文件样式
+```bash
+
+npm set-script lintcss 'stylelint demo/**/*.{css, scss,vue} --fix'
+
+```

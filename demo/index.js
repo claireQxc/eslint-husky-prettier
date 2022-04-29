@@ -21,5 +21,3 @@ if (a === 1) {
   }
 }
 
-const cc = '123'
-const ccc = 1

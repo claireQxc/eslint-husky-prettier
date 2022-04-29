@@ -36,7 +36,7 @@
     <el-form>
       <el-form-item label="username">
         <el-input
-          style="width: 100%"
+          style="width: 100%;"
           type="number"
           @click="onClick"
         />
@@ -77,18 +77,17 @@ export default {
     }
   },
   computed: {
-    a: function () {
+    a: function() {
       return this.form.name
     },
   },
   watch: {
-    list: function (val) {
+    list: function(val) {
       console.log(val)
     },
   },
   methods: {
     getList() {
-      const arr = this.list
       const user = '123'
       console.log(user)
       return 13
@@ -99,4 +98,12 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style lang="scss">
+  .demo  {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+</style>
