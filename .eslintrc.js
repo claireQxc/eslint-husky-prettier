@@ -102,7 +102,7 @@ module.exports = {
     // 禁止 function 定义中出现重名参数
     'no-dupe-args': 2,
     // 指定程序中允许的最大环路复杂度
-    complexity: ['error', 5],
+    complexity: ['error', 10],
     // 要求 return 语句要么总是指定返回的值，要么不指定
     'consistent-return': 1,
     // 强制所有控制语句使用一致的括号风格
