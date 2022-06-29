@@ -25,7 +25,6 @@
     "*.wxml": "html"
   },
   "eslint.codeAction.showDocumentation": {
-
     "enable": true
   }
 }
